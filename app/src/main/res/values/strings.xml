@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Fallout character quiz</string>
+    <string name="title">Define your character</string>
+    <string name="char_name">Please enter your character name:</string>
+    <string name="sex">Choose your sex:</string>
+    <string name="answer_male">male</string>
+    <string name="answer_female">female</string>
+
+    <string name="question_problems">How do you react in case of problems?</string>
+    <string name="answer1_problems">Try to solve it by force</string>
+    <string name="answer2_problems">Run away</string>
+    <string name="answer3_problems">Do nothing and wait what happens next</string>
+    <string name="answer4_problems">Start to cry out loud</string>
+    <string name="answer5_problems">Analyse the situation and come with the best solution</string>
+
+
+    <string name="question_responsibility">Very important task has been assigned to you:</string>
+    <string name="answer1_responsibility">So what? Their faulty decisions are not my problem</string>
+    <string name="answer2_responsibility">I always deliver results in no time!</string>
+    <string name="answer3_responsibility">Using my puppy eyes never let me down</string>
+    <string name="answer4_responsibility">Preparation is the key</string>
+    <string name="answer5_responsibility">My loaded gun solves every obstacle</string>
+
+    <string name="question_equipment">To a deserted island I would take:</string>
+    <string name="answer1_equipment">Antidepression pills</string>
+    <string name="answer2_equipment">Survival kit</string>
+    <string name="answer3_equipment">All my favorite encyclopedias</string>
+    <string name="answer4_equipment">Sun glasses</string>
+    <string name="answer5_equipment">Nothing. I won\'t stay there long</string>
+
+
+    <string name="question_party">My last birthday party was:</string>
+    <string name="answer1_party">Taking place in the local coffee shop</string>
+    <string name="answer2_party">Ended by police intervention</string>
+    <string name="answer3_party">Too loud. Too many people came that horrible night</string>
+    <string name="answer4_party">Kind of good I guess. I was still running around</string>
+    <string name="answer5_party">OK</string>
+
+
+    <string name="question_fear">I feel scared when:</string>
+    <string name="answer1_fear">I am surrounded by people or overwhelmed by some situation</string>
+    <string name="answer2_fear">I am out of ammo</string>
+    <string name="answer3_fear">What? Why should I ever feel that way?</string>
+    <string name="answer4_fear">Something/someone is about to hurting me</string>
+    <string name="answer5_fear">I can\'t think clearly</string>
+
+    <string name="selectCharacter">Select the best character for me</string>
+
+</resources>

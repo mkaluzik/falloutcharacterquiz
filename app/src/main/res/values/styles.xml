@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/falloutTextColor</item>
+        <item name="android:textViewStyle">@style/MyTextViewStyle</item>
+        <item name="android:editTextStyle">@style/MyEditTextStyle</item>
+        <item name="android:radioButtonStyle">@style/RadioButtonStyle</item>
+        <item name="android:checkboxStyle">@style/CheckBoxStyle</item>
+    </style>
+
+
+    <style name="MyTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/falloutTextColor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">monospace</item>
+
+    </style>
+
+    <style name="MyEditTextStyle" parent="android:Widget.EditText">
+        <item name="colorControlNormal">@color/falloutTextColor</item>
+        <item name="colorControlActivated">@color/falloutTextColor</item>
+        <item name="colorControlHighlight">@color/falloutTextColor</item>
+
+
+    </style>
+
+    <style name="RadioButtonStyle" parent="android:Widget.CompoundButton.RadioButton">
+        <item name="android:textColor">@color/falloutTextColor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="CheckBoxStyle" parent="android:Widget.CompoundButton.CheckBox">
+        <item name="android:textColor">@color/falloutTextColor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+
+</resources>
