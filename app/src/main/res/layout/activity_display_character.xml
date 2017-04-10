@@ -10,25 +10,92 @@ tools:context="com.example.android.falloutcharacterquiz.DisplayCharacter">
 
 
 
-<ImageView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:scaleType="center"
-    android:src="@drawable/background" />
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@drawable/background" />
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lefttopline"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            />
 
         <TextView
-            android:id="@+id/testText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
+            android:id="@+id/resultTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/resultTitle"
 
+            android:textSize="@dimen/title_text_size"
+
+            android:textStyle="bold"
+
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/righttopline"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+
+            >
+
+        <TextView
+            android:id="@+id/char_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/question_margin_top"
+            android:text=""
+
+            android:textSize="@dimen/char_desc_textsize"/>
+        <TextView
+            android:id="@+id/char_sex"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/question_margin_top"
+            android:text=""
+
+            android:textSize="@dimen/char_desc_textsize"/>
+        <TextView
+            android:id="@+id/char_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/question_margin_top"
+            android:text=""
+            android:textSize="@dimen/char_desc_textsize"/>
+        <ImageView
+            android:id="@+id/char_type_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/question_margin_top"
+
+            />
+    </LinearLayout></LinearLayout>
     </ScrollView>
     </RelativeLayout>
