@@ -18,6 +18,16 @@ public class MainActivity extends AppCompatActivity {
     int mrNoBigDeal = 0;
     String name ="";
     String sex ="";
+    CheckBox antidepresives ;
+    CheckBox survivalKit ;
+    CheckBox encyclopedia;
+    CheckBox sunGlasses ;
+    CheckBox nothing ;
+    RadioGroup radioGroup1 ;
+    RadioGroup radioGroup2 ;
+    RadioGroup radioGroup3 ;
+    RadioGroup radioGroup4 ;
+    RadioGroup radioGroup5 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +36,16 @@ public class MainActivity extends AppCompatActivity {
 
         TypefaceUtil.overrideFont(getApplicationContext(), "MONOSPACE", "fonts/monofont.ttf");
 
+         antidepresives = (CheckBox)findViewById(R.id.antidepresives);
+         survivalKit = (CheckBox)findViewById(R.id.survival_kit);
+         encyclopedia = (CheckBox)findViewById(R.id.encyclopedia);
+         sunGlasses = (CheckBox)findViewById(R.id.sun_glasses);
+         nothing = (CheckBox)findViewById(R.id.nothing);
+        radioGroup1 = (RadioGroup) findViewById(R.id.rg_q1);
+        radioGroup2 = (RadioGroup) findViewById(R.id.rg_q2);
+        radioGroup3 = (RadioGroup) findViewById(R.id.rg_q3);
+         radioGroup4 = (RadioGroup) findViewById(R.id.rg_q4);
+         radioGroup5 = (RadioGroup) findViewById(R.id.rg_q5);
     }
 
     public void check(View view){
@@ -37,24 +57,24 @@ public class MainActivity extends AppCompatActivity {
 
         RadioGroup radioGroup;
         //Let's check 2nd answer
-        radioGroup = (RadioGroup) findViewById(R.id.rg_q1);
-        if(radioGroup.getCheckedRadioButtonId()==R.id.male){
+
+        if(radioGroup1.getCheckedRadioButtonId()==R.id.male){
             sex="male";
         } else { sex ="female";}
 
 
         //Let's check the 3rd answer
-        radioGroup = (RadioGroup) findViewById(R.id.rg_q2);
-        if(radioGroup.getCheckedRadioButtonId()==R.id.answer1_problems){
+
+        if(radioGroup2.getCheckedRadioButtonId()==R.id.answer1_problems){
             actionMan++;
-        } else if (radioGroup.getCheckedRadioButtonId()==R.id.answer2_problems){
+        } else if (radioGroup2.getCheckedRadioButtonId()==R.id.answer2_problems){
             getLostType++;
 
-        } else if (radioGroup.getCheckedRadioButtonId()==R.id.answer3_problems) {
+        } else if (radioGroup2.getCheckedRadioButtonId()==R.id.answer3_problems) {
             mrNoBigDeal++;
 
 
-        } else if (radioGroup.getCheckedRadioButtonId()==R.id.answer4_problems){
+        } else if (radioGroup2.getCheckedRadioButtonId()==R.id.answer4_problems){
             ouchieType++;
 
         } else {
@@ -64,17 +84,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
         //Let's check the 4th answer
-        radioGroup = (RadioGroup) findViewById(R.id.rg_q3);
-        if(radioGroup.getCheckedRadioButtonId()==R.id.answer1_responsibility){
+
+        if(radioGroup3.getCheckedRadioButtonId()==R.id.answer1_responsibility){
             mrNoBigDeal++;
-        } else if (radioGroup.getCheckedRadioButtonId()==R.id.answer2_responsibility){
+        } else if (radioGroup3.getCheckedRadioButtonId()==R.id.answer2_responsibility){
             getLostType++;
 
-        } else if (radioGroup.getCheckedRadioButtonId()==R.id.answer3_responsibility) {
+        } else if (radioGroup3.getCheckedRadioButtonId()==R.id.answer3_responsibility) {
             ouchieType++;
 
 
-        } else if (radioGroup.getCheckedRadioButtonId()==R.id.answer4_responsibility){
+        } else if (radioGroup3.getCheckedRadioButtonId()==R.id.answer4_responsibility){
             brainiac++;
 
         } else {
@@ -86,33 +106,34 @@ public class MainActivity extends AppCompatActivity {
 
         //Let's check the 5th answer(s)
 
-        CheckBox antidepresives = (CheckBox)findViewById(R.id.antidepresives);
+
+
         if (antidepresives.isChecked())  ouchieType++;
 
-        CheckBox survivalKit = (CheckBox)findViewById(R.id.survival_kit);
+
         if (survivalKit.isChecked())  actionMan++;
 
-        CheckBox encyclopedia = (CheckBox)findViewById(R.id.encyclopedia);
+
         if (encyclopedia.isChecked())   brainiac++;
 
-        CheckBox sunGlasses = (CheckBox)findViewById(R.id.sun_glasses);
+
         if (sunGlasses.isChecked())    mrNoBigDeal++;
 
-        CheckBox nothing = (CheckBox)findViewById(R.id.nothing);
+
         if (nothing.isChecked())     getLostType++;
 
         //Let's check the 6th answer
-        radioGroup = (RadioGroup) findViewById(R.id.rg_q4);
-        if(radioGroup.getCheckedRadioButtonId()==R.id.answer1_party){
+
+        if(radioGroup4.getCheckedRadioButtonId()==R.id.answer1_party){
             brainiac++;
-        } else if (radioGroup.getCheckedRadioButtonId()==R.id.answer2_party){
+        } else if (radioGroup4.getCheckedRadioButtonId()==R.id.answer2_party){
             actionMan++;
 
-        } else if (radioGroup.getCheckedRadioButtonId()==R.id.answer3_party) {
+        } else if (radioGroup4.getCheckedRadioButtonId()==R.id.answer3_party) {
             ouchieType++;
 
 
-        } else if (radioGroup.getCheckedRadioButtonId()==R.id.answer4_party){
+        } else if (radioGroup4.getCheckedRadioButtonId()==R.id.answer4_party){
             getLostType++;
 
         } else {
@@ -123,16 +144,16 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Let's check the 7th answer
-        radioGroup = (RadioGroup) findViewById(R.id.rg_q5);
-        if(radioGroup.getCheckedRadioButtonId()==R.id.answer1_fear){
+
+        if(radioGroup5.getCheckedRadioButtonId()==R.id.answer1_fear){
             getLostType++;
-        } else if (radioGroup.getCheckedRadioButtonId()==R.id.answer2_fear){
+        } else if (radioGroup5.getCheckedRadioButtonId()==R.id.answer2_fear){
             actionMan++;
 
-        } else if (radioGroup.getCheckedRadioButtonId()==R.id.answer3_fear) {
+        } else if (radioGroup5.getCheckedRadioButtonId()==R.id.answer3_fear) {
             mrNoBigDeal++;
 
-        } else if (radioGroup.getCheckedRadioButtonId()==R.id.answer4_fear){
+        } else if (radioGroup5.getCheckedRadioButtonId()==R.id.answer4_fear){
             ouchieType++;
 
         } else {
