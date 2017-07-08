@@ -47,4 +47,30 @@
     <string name="selectCharacter">Select the best character for me</string>
     <string name="resultTitle">Your character description</string>
 
+    <string name="quiz_header">Quiz part</string>
+
+    <string name="company_name">Which company has developed first Fallout game?</string>
+
+    <string name="question_pipBoy">Which version of Pip-Boy do you use in the first Fallout game?</string>
+    <string name="answer1_pip">Pip-Boy 2017</string>
+    <string name="answer2_pip">Pip-Boy 2000</string>
+    <string name="answer3_pip">Pip-Boy 1.0</string>
+
+
+    <string name="question_cow">How do you call mutated cow with two heads?</string>
+    <string name="answer1_cow">Headmaster</string>
+    <string name="answer2_cow">Supercow</string>
+    <string name="answer3_cow">Brahmin</string>
+
+    <string name="question_healthBoost">Which of the following can boost your health in the game?</string>
+    <string name="answer1_health">Buffout</string>
+    <string name="answer2_health">Waiting</string>
+    <string name="answer3_health">Poison pill</string>
+    <string name="answer4_health">Radiation</string>
+    <string name="answer5_health">Stimpack</string>
+
+    <string name="quizResults">Quiz results</string>
+
+
+
 </resources>

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,11 +24,22 @@ public class MainActivity extends AppCompatActivity {
     CheckBox encyclopedia;
     CheckBox sunGlasses ;
     CheckBox nothing ;
+    CheckBox stimpack ;
+    CheckBox radiation ;
+    CheckBox waiting;
+    CheckBox buffout ;
+    CheckBox poison ;
     RadioGroup radioGroup1 ;
     RadioGroup radioGroup2 ;
     RadioGroup radioGroup3 ;
     RadioGroup radioGroup4 ;
     RadioGroup radioGroup5 ;
+    RadioGroup radioGroup6 ;
+    RadioGroup radioGroup7 ;
+
+
+    int score=0;
+    String companyName="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,16 +48,55 @@ public class MainActivity extends AppCompatActivity {
 
         TypefaceUtil.overrideFont(getApplicationContext(), "MONOSPACE", "fonts/monofont.ttf");
 
-         antidepresives = (CheckBox)findViewById(R.id.antidepresives);
-         survivalKit = (CheckBox)findViewById(R.id.survival_kit);
-         encyclopedia = (CheckBox)findViewById(R.id.encyclopedia);
-         sunGlasses = (CheckBox)findViewById(R.id.sun_glasses);
-         nothing = (CheckBox)findViewById(R.id.nothing);
+        buffout = (CheckBox)findViewById(R.id.answer1_health);
+        waiting = (CheckBox)findViewById(R.id.answer2_health);
+        poison = (CheckBox)findViewById(R.id.answer3_health);
+        radiation = (CheckBox)findViewById(R.id.answer4_health);
+        stimpack = (CheckBox)findViewById(R.id.answer5_health);
+        antidepresives = (CheckBox)findViewById(R.id.antidepresives);
+        survivalKit = (CheckBox)findViewById(R.id.survival_kit);
+        encyclopedia = (CheckBox)findViewById(R.id.encyclopedia);
+        sunGlasses = (CheckBox)findViewById(R.id.sun_glasses);
+        nothing = (CheckBox)findViewById(R.id.nothing);
         radioGroup1 = (RadioGroup) findViewById(R.id.rg_q1);
         radioGroup2 = (RadioGroup) findViewById(R.id.rg_q2);
         radioGroup3 = (RadioGroup) findViewById(R.id.rg_q3);
          radioGroup4 = (RadioGroup) findViewById(R.id.rg_q4);
          radioGroup5 = (RadioGroup) findViewById(R.id.rg_q5);
+        radioGroup6 = (RadioGroup) findViewById(R.id.rg_q6);
+        radioGroup7 = (RadioGroup) findViewById(R.id.rg_q7);
+
+    }
+
+    // Quiz part check
+
+    public void quiz_check(View view){
+// Let's check the company name correct answer is Interplay Entertainment
+        EditText developerName = (EditText) this.findViewById(R.id.company_name_question);
+        companyName = developerName.getText().toString();
+    if (companyName.equals("Interplay Entertainment")){
+        score++;
+
+}
+// Second question check
+        if(radioGroup6.getCheckedRadioButtonId()==R.id.answer2_pip){
+            score++;
+
+    }
+        // Third question check
+        if(radioGroup7.getCheckedRadioButtonId()==R.id.answer3_cow){
+            score++;
+
+        }
+        // Fourth question check
+        if ((buffout.isChecked() && waiting.isChecked() && stimpack.isChecked())&&(!poison.isChecked() && !radiation.isChecked())){
+            score++;
+        }
+
+
+        Toast.makeText(getApplicationContext(), "You have "+score+" correct answers out of 4", Toast.LENGTH_SHORT).show();
+
+        score=0;
     }
 
     public void check(View view){
